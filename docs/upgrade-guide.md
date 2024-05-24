@@ -2,11 +2,35 @@
 
 This document helps you upgrade from a super-linter version to newer ones:
 
+- [Upgrade from v6 to v7](#upgrade-from-v6-to-v7)
 - [Upgrade from v5 to v6](#upgrade-from-v5-to-v6)
+
+## Upgrade from v6 to v7
+
+This section helps you upgrade from super-linter `v6` to `v7`.
+
+### JAVASCRIPT_DEFAULT_STYLE and TYPESCRIPT_DEFAULT_STYLE
+
+- `JAVASCRIPT_DEFAULT_STYLE` and `TYPESCRIPT_DEFAULT_STYLE` have been deprecated
+  to remove two corner cases that Super-linter can handle with the general
+  validation logic that applies to enabling and disabling other linters as
+  follows:
+
+  - If you set `JAVASCRIPT_DEFAULT_STYLE` to `standard`, set
+    `VALIDATE_JAVASCRIPT_PRETTIER` to `false`.
+  - If you set `JAVASCRIPT_DEFAULT_STYLE` to `prettier`, set
+    `VALIDATE_JAVASCRIPT_STANDARD` to `false`.
+  - If you set `TYPESCRIPT_DEFAULT_STYLE` to `standard`, set
+    `VALIDATE_TYPESCRIPT_PRETTIER` to `false`.
+  - If you set `TYPESCRIPT_DEFAULT_STYLE` to `prettier`, set
+    `VALIDATE_TYPESCRIPT_STANDARD` to `false`.
+
+  Finally, remove the `JAVASCRIPT_DEFAULT_STYLE` and the
+  `TYPESCRIPT_DEFAULT_STYLE` variables from your Super-linter configuration.
 
 ## Upgrade from v5 to v6
 
-This section helps you migrate from super-linter `v5` to `v6`.
+This section helps you upgrade from super-linter `v5` to `v6`.
 
 ### eslint-config-airbnb-typescript
 
