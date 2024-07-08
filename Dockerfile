@@ -20,7 +20,7 @@ FROM hadolint/hadolint:v2.12.0-alpine as dockerfile-lint
 FROM registry.k8s.io/kustomize/kustomize:v5.4.2 as kustomize
 FROM hashicorp/terraform:1.8.4 as terraform
 FROM koalaman/shellcheck:v0.10.0 as shellcheck
-FROM mstruebing/editorconfig-checker:v3.0.1 as editorconfig-checker
+FROM mstruebing/editorconfig-checker:v3.0.3 as editorconfig-checker
 FROM mvdan/shfmt:v3.8.0 as shfmt
 FROM rhysd/actionlint:1.7.1 as actionlint
 FROM scalameta/scalafmt:v3.8.1 as scalafmt
